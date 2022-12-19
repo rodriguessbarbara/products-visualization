@@ -1,0 +1,25 @@
+.contato {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.lista {
+  padding: 0px;
+  list-style: none;
+}
+
+.lista li {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.lista li::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 5px;
+  border-radius: 99px;
+  margin-right: 10px;
+  background-color: #ffdb8d;
+}
