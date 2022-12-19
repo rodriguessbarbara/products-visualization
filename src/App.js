@@ -1,21 +1,29 @@
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
+import Produtos from './components/Produtos';
 import Contato from './components/Contato';
 import Pagina404 from './components/Pagina404';
 import Header from './components/Head/Header';
+import Footer from './components/Footer./Footer';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header/>
+    <div className='App'>
+      <BrowserRouter>
+        <Header/>
 
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='contato' element={<Contato/>}/>
-        <Route path="*" element={<Pagina404 />} />
-      </Routes>
-    </BrowserRouter>
+        <div className='content'>
+          <Routes>
+            <Route path='/' end element={<Produtos/>}/>
+            <Route path='contato' element={<Contato/>}/>
+            <Route path="*" element={<Pagina404 />} />
+        </Routes>
+        </div>
+
+        <Footer/>
+      </BrowserRouter>
+    </div>
+
   );
 }
 
