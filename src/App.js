@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import Produtos from './components/Produtos';
+import Produto from './components/Produto';
 import Contato from './components/Contato';
 import Pagina404 from './components/Pagina404';
 import Header from './components/Head/Header';
@@ -15,6 +16,7 @@ function App() {
         <div className='content'>
           <Routes>
             <Route path='/' end element={<Produtos/>}/>
+            <Route path='produto/:id' end element={<Produto/>}/>
             <Route path='contato' element={<Contato/>}/>
             <Route path="*" element={<Pagina404 />} />
         </Routes>

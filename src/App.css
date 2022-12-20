@@ -1,6 +1,7 @@
 body {
-  display: block;
-  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
   margin: 2rem auto;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -41,5 +42,20 @@ h1 {
   to {
     transform: initial;
     opacity: initial;
+  }
+}
+
+.carregando {
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  border: 8px solid #aaa;
+  border-right-color: transparent;
+  animation: carregando 1s infinite;
+}
+
+@keyframes carregando {
+  to {
+    transform: rotate(360deg);
   }
 }
