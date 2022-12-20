@@ -5,7 +5,7 @@ import foto from '../img/contato.jpg'
 
 const Contato = () => {
   return (
-    <div className={styles.contato}>
+    <div className={styles.contato + " animarTelaEsquerda"}>
       <Head title="PZation | Contato" description="Descrição de contato" />
 
       <img src={foto} alt='máquina de escrever'/>
